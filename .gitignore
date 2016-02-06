@@ -1,2 +1,6 @@
 /client/target/
 /server/target/
+/api/nbproject/private/
+/api/build/
+/api/dist/
+api/src/cz/mudraon/shared/Message.java

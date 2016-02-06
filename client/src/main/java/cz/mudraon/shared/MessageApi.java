@@ -9,7 +9,11 @@ package cz.mudraon.shared;
  *
  * @author Mutagen
  */
-public interface MessageApi { 
-    public String Message(String message);
-    public String Time(String time);
+public interface MessageApi {
+
+    public String getAllMessage(Message _messageObj);
+
+    public String getOnlyMessage(Message _messageObj);
+
+    public String getOnlyDate(Message _messageObj);
 }

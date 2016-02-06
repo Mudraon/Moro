@@ -1,31 +1,48 @@
 package cz.mudraon.shared;
 
-public class Message {
-    
-    private String Message;
-    private String Time;
+import java.util.Date;
+
+public class Message implements java.io.Serializable {
+
+    private String message;
+    private Date date;
+    private String serverDate;
 
     public Message() {
     }
 
-    public Message(String Message, String Time) {
-        this.Message = Message;
-        this.Time = Time;
+    public Message(String _message, Date _date) {
+        message = _message;
+        date = _date;
     }
-   
+
+    public Message(String _message, String _serverDate) {
+        message = _message;
+        serverDate = _serverDate;
+    }
+
     public String getMessage() {
-        return Message;
+        return message;
     }
 
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public String getTime() {
-        return Time;
+    public Date getDate() {
+        return date;
     }
 
-    public void setTime(String Time) {
-        this.Time = Time;
+    public void setDate(Date date) {
+        this.date = date;
     }
+
+    public String getServerDate() {
+        return serverDate;
+    }
+
+    public void setServerDate(String serverDate) {
+        this.serverDate = serverDate;
+    }
+
 }
