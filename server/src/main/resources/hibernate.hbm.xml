@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cz.mudraon.shared.Message" table="Message">
+        <meta attribute="class-description">
+            Message Object
+        </meta>
+        <id name="uid" column="TID" type="int">
+            <generator class="increment" />
+        </id>
+        <property name="message" column="TMESSAGE" type="text"/>
+        <property name="serverDate" column="TSERVERDATE" type="text"/>
+        <property name="date" column="TDATE" type="date"/>
+    </class>
+</hibernate-mapping>

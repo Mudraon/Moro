@@ -2,12 +2,15 @@ package cz.mudraon.shared;
 
 import java.util.Date;
 
-
 public class Message implements java.io.Serializable {
 
+    private int uid;
     private String message;
     private Date date;
     private String serverDate;
+
+    public Message() {
+    }
 
     public Message(String _message, Date _date) {
         message = _message;
@@ -17,6 +20,14 @@ public class Message implements java.io.Serializable {
     public Message(String _message, String _serverDate) {
         message = _message;
         serverDate = _serverDate;
+    }
+    
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public String getMessage() {
